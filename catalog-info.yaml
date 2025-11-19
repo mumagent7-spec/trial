@@ -1,0 +1,29 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-example
+  description: An example project to showcase Backstage.io features
+  # This annotation is how Backstage knows where to find the source code repository
+  annotations:
+    github.com/project-slug: 'YOUR_GITHUB_USERNAME/YOUR_REPO_NAME'
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:guest
+  # This links the component to the API definition in openapi.yaml
+  providesApis:
+    - backstage-example-api
+
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: backstage-example-api
+  description: The API for the Backstage example service
+spec:
+  type: openapi
+  lifecycle: experimental
+  owner: user:guest
+  # The path to the API definition file relative to the catalog file
+  definition:
+    $text: ./openapi.yaml

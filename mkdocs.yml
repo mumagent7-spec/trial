@@ -1,0 +1,6 @@
+site_name: 'backstage-example-docs'
+nav:
+  - Home: index.md
+
+# This is required for Backstage TechDocs to find the documentation source files
+docs_dir: ./docs

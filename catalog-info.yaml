@@ -5,7 +5,7 @@ metadata:
   description: An example project to showcase Backstage.io features
   # This annotation is how Backstage knows where to find the source code repository
   annotations:
-    github.com/project-slug: 'YOUR_GITHUB_USERNAME/YOUR_REPO_NAME'
+    github.com/project-slug: 'mumagent7-spec/trial'
 spec:
   type: service
   lifecycle: experimental
